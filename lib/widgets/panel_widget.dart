@@ -9,28 +9,16 @@ class PanelWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.zero,
-      controller: controller,
+    return Column(
+      //padding: EdgeInsets.zero,
+      //controller: controller,
       children: <Widget>[
-        buildAboutText(),
-        SizedBox(
-          height: 24,
-        )
+        buildDragHandle(),
+        CustomCreditCard(),
+        TransactionList(),
       ],
     );
   }
-
-  Widget buildAboutText() => Padding(
-        padding: EdgeInsets.symmetric(horizontal: 2),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            buildDragHandle(),
-            CustomCreditCard(),
-          ],
-        ),
-      );
 
   buildDragHandle() {
     return Padding(
